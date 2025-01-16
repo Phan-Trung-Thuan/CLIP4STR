@@ -32,6 +32,7 @@ def main():
     parser.add_argument('--device', default='cuda')
     args, unknown = parser.parse_known_args()
     kwargs = parse_model_args(unknown)
+    kwargs['clip_pretrained'] = 'CLIP-ViT-H-14-laion2B-s32B-b79K.bin'
     print(f'Additional keyword arguments: {kwargs}')
 
     model = load_from_checkpoint(args.checkpoint, **kwargs).eval().to(args.device)
