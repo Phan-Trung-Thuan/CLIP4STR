@@ -20,7 +20,7 @@ from .modules import DecoderLayer, Decoder, modify_attn_mask
 
 # an alternative choice when the input argument is not valid 
 # CLIP_PATH = '/PUT/YOUR/PATH/HERE/pretrained/clip''
-CLIP_PATH = '/home/shuai/pretrained/clip'
+CLIP_PATH = '/kaggle/working/CLIP4STR'
 if not os.path.exists(CLIP_PATH):
     CLIP_PATH = '/home/shuzhao/Data/pretrained/clip'
 assert os.path.exists(CLIP_PATH)
